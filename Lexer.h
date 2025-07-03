@@ -3,11 +3,14 @@
 #include <vector>
 #include <regex>
 #include <string>
+static std::vector<std::string> keywords = { "import", "func", "while", "boolean", "for", "int", "str", "if", "else", "elseif", "char", "byte", "float", "double" };
+
 enum Types {
 	OPERAND,
 	NUMBER,
 	ID,
-	KEYWORD
+	KEYWORD,
+	VARIBLE
 
 };
 
@@ -29,7 +32,7 @@ enum KeywordsEnum {
 
 };
 
-typedef struct Token {
+typedef struct Token_structure {
 	Types Type;
 	std::string Value;
 
@@ -39,11 +42,10 @@ typedef struct Token {
 class Lexer
 {
 public:
-  Token GetTokens(std::string code);
+  std::vector<std::string> GetTokens(std::string code);
   std::string GenerateRegex();
   void AddKeyword(std::string keyword);
-std::vector<std::string> keywords = { "import","func","while","boolean","for","int","str","if","else","elseif","char","byte","float","double" };
-
+  
 
 
 
