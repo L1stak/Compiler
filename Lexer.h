@@ -34,20 +34,18 @@ typedef struct Token {
 	std::string Value;
 
 };
-std::vector<std::string> keywords = { "import","func","while","boolean","for","int","str","if","else","elseif","char","byte","float","double" };
+// std::vector<std::string> keywords = { "import","func","while","boolean","for","int","str","if","else","elseif","char","byte","float","double" };
 
 class Lexer
 {
-	
-	
 public:
- Token GetTokens(std::string code);
- std::string GenerateRegex();
- void AddKeyword(std::string keyword);
- 
+  Token GetTokens(std::string code);
+  std::string GenerateRegex();
+  void AddKeyword(std::string keyword);
+std::vector<std::string> keywords = { "import","func","while","boolean","for","int","str","if","else","elseif","char","byte","float","double" };
 
- 
-	
+
+
 
 };
 
