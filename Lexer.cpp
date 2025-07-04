@@ -29,13 +29,13 @@ int keywordsCount = keywords.size();
 
    
     
-     regex = "\\b( " + keyword + R"()\b|[a-zA-Z_]\w*|\d+|"[^"]*"|'[^']*'|[=;(){}])";
+     regex = "\\b( " + keyword + R"()\b|[a-zA-Z_]\w*|\d+|"[^"]*"|'[^']*'|[=;(){}""<><<>>.!*+-])";
      //std::cout << regex;
      return regex;
  }
 
  inline bool IsDigit(std::string data) {
-     int buffer;
+     int buffer=0;
      for (size_t i = 0; i < data.size(); i++)
      {
 
