@@ -1,8 +1,16 @@
+
+
+
 #pragma once
+
 #include <iostream>
 #include <vector>
 #include <regex>
 #include <string>
+//////////////////////////////////////////////////
+///         Copyright (C) 2025  L1stak         ///
+///             fast lang compiler             ///
+//////////////////////////////////////////////////
 static std::vector<std::string> keywords = { "import", "func", "while", "boolean", "for", "int", "str", "if", "else", "elseif", "char", "byte", "float", "double" };
 
 enum Types {
@@ -37,7 +45,6 @@ typedef struct Token_structure {
 	std::string Value;
 
 };
-// std::vector<std::string> keywords = { "import","func","while","boolean","for","int","str","if","else","elseif","char","byte","float","double" };
 
 class Lexer
 {

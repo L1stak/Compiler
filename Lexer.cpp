@@ -1,6 +1,9 @@
 #include "Lexer.h"
 #include <iostream>
-
+//////////////////////////////////////////////////
+///         Copyright (C) 2025  L1stak         ///
+///             fast lang compiler             ///
+//////////////////////////////////////////////////
 
 
 
@@ -9,7 +12,7 @@ int keywordsCount = keywords.size();
 
 
  void Lexer::AddKeyword(std::string keyword) {
-    // Lexer::keywords.pop_back();
+   
       keywords.push_back(keyword);
  }
 
@@ -30,7 +33,7 @@ int keywordsCount = keywords.size();
    
     
      regex = "\\b( " + keyword + R"()\b|[a-zA-Z_]\w*|\d+|"[^"]*"|'[^']*'|[=;(){}""<><<>>.!*+-])";
-     //std::cout << regex;
+    
      return regex;
  }
 
@@ -63,9 +66,12 @@ int keywordsCount = keywords.size();
  }
  inline bool IsOperand(std::string token) {
 
-     return (token == "+" or token == "-" or token == "=");
+     if (token[0] >= 42 && token[0] <= 47 or token[0] == 33 or token[0] >= 58 or token[0] <= 62) {
 
+         return true;
+     }
 
+     return false;
  }
  std::vector<std::string> Lexer::GetTokens(std::string code) {
     
@@ -98,6 +104,12 @@ int keywordsCount = keywords.size();
              tk.Type = Types::OPERAND;
              tk.Value = token;
 
+
+         }
+
+         else {
+             tk.Type = Types::ID;
+             tk.Value = token;
 
          }
      }
