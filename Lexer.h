@@ -18,7 +18,18 @@ enum Types {
 	NUMBER,
 	ID,
 	KEYWORD,
-	VARIBLE
+	VARIBLE,
+	INT,
+	STR,
+	BOOL,
+	FLOAT,
+	DOUBLE,
+	BYTE,
+	PLUS,
+	MINUS,
+	MUL,
+	DIV,
+	NEWLINE
 
 };
 
@@ -40,7 +51,7 @@ enum KeywordsEnum {
 
 };
 
-typedef struct Token_structure {
+struct Token_structure {
 	Types Type;
 	std::string Value;
 
