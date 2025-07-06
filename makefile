@@ -1,32 +1,31 @@
 
 TARGET = Compiler 
 
-
-
-ifeq ($(OS),Windows_NT)
-	CXX = g++
+CXX = g++
 	CXXFLAGS = -Wall -Wextra -std=c++17 -static-libstdc++
+
+ifeq ($(OS),Windows_NT)  # for windows users xD
+	
 	SRCS = $(shell powershell -Command "Get-ChildItem -Recurse -Filter *.cpp | Resolve-Path -Relative")
   
 else
-	CXX = g++
-	CXXFLAGS = -Wall -Wextra -std=c++17 -static-libstdc++
+	
 	SRCS = $(shell find . -name '*.cpp' ) 
 
 endif
-INCLUDES = -I./include
+
 OBJS = $(SRCS:.cpp=.o)
 
 
 $(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(INCLUDES) $(OBJS) -o $(TARGET)
+	$(CXX) $(CXXFLAGS) -I./include $(OBJS) -o $(TARGET)
 
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -I./include -c $< -o $@
 
 clean:
-ifeq ($(OS),Windows_NT)
+ifeq ($(OS),Windows_NT) # for windows users xD
 	del Compiler.exe
 else
 	rm -f $(OBJS) $(TARGET)
