@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Lexer.h"
+#include "./include/Lexer.h"
 
 
 #include <vector>

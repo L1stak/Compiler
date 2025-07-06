@@ -1,4 +1,4 @@
-#include "Lexer.h"
+#include "./include/Lexer.h"
 #include <iostream>
 //////////////////////////////////////////////////
 ///         Copyright (C) 2025  L1stak         ///
@@ -103,18 +103,14 @@ int keywordsCount = keywords.size();
          else if (IsOperand(token)) {
              tk.Type = Types::OPERAND;
              tk.Value = token;
-             structuredTokens.push_back(tk);
+
 
          }
-         else if (token == "\n") {
-             tk.Type = Types::NEWLINE;
-             tk.Value = "";
-             structuredTokens.push_back(tk);
-         }
+
          else {
              tk.Type = Types::ID;
              tk.Value = token;
-             structuredTokens.push_back(tk);
+
          }
      }
     

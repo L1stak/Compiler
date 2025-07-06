@@ -14,7 +14,9 @@
 *.vcxproj.filters
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-
+*.o
+*.exe
+*.bat
 # Mono auto generated files
 mono_crash.*
 
