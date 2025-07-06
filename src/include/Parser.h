@@ -9,6 +9,6 @@ class Parser
 {
 public:
 	void ParseTokens(std::vector<Token_structure> tokens);
-	void Expect(Token_structure token, long long pos, long long line);
+	void Except(Token_structure token, long long pos, long long line, std::string comment);
 };
 
