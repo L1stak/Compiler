@@ -1,5 +1,8 @@
-
-
+/*
+* Fast lang compiler, a custom compiler
+* Copyright (c) 2025 L1stak
+* SPDX-License-Identifier: GPL-3.0-or-later
+*/
 
 #pragma once
 
@@ -7,10 +10,6 @@
 #include <vector>
 #include <regex>
 #include <string>
-//////////////////////////////////////////////////
-///         Copyright (C) 2025  L1stak         ///
-///             fast lang compiler             ///
-//////////////////////////////////////////////////
 static std::vector<std::string> keywords = { "import", "func", "while", "boolean", "for", "int", "str", "if", "else", "elseif", "char", "byte", "float", "double" };
 
 enum Types {

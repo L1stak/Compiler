@@ -1,8 +1,10 @@
+/*
+* Fast lang compiler, a custom compiler
+* Copyright (c) 2025 L1stak and Bduidan
+* SPDX-License-Identifier: GPL-3.0-or-later
+*/
+
 #include "./include/Parser.h"
-//////////////////////////////////////////////////
-///         Copyright (C) 2025  L1stak         ///
-///             fast lang compiler             ///
-//////////////////////////////////////////////////
 
 void Parser::Except(Token_structure token, long long pos, long long line, std::string comment) {
 
@@ -15,8 +17,6 @@ void Parser::Except(Token_structure token, long long pos, long long line, std::s
 std::vector<AbstractSyntaxTree> syntaxTree;
 AbstractSyntaxTree ASTObj;
 void Parser::ParseTokens(std::vector<Token_structure> tokens) {
-	long long pos = 0;
-	long long len = tokens.size();
 	long long line = 0;
 	bool HasMain = false;
 
@@ -25,7 +25,7 @@ void Parser::ParseTokens(std::vector<Token_structure> tokens) {
 		Adding for and while logic and varibles
 	
 	*/
-	for (pos; pos < len;pos++) {
+	for (long long pos = 0; pos < tokens.size(); pos++) {
 		if (tokens[pos].Type == Types::NEWLINE) {
 			line++;
 
