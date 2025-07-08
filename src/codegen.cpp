@@ -1,1 +1,7 @@
-#include "codegen.h"
+/*
+* Fast lang compiler, a custom compiler
+* Copyright (c) 2025 L1stak
+* SPDX-License-Identifier: GPL-3.0-or-later
+*/
+
+#include "include/codegen.h"

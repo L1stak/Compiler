@@ -1,9 +1,11 @@
+/*
+* Fast lang compiler, a custom compiler
+* Copyright (c) 2025 L1stak
+* SPDX-License-Identifier: GPL-3.0-or-later
+*/
+
 #pragma once
-#include "./include/Lexer.h"
-//////////////////////////////////////////////////
-///         Copyright (C) 2025  L1stak         ///
-///             fast lang compiler             ///
-//////////////////////////////////////////////////
+#include "./Lexer.h"
 #include <string>
 #include <any>
 
