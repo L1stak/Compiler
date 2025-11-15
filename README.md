@@ -3,6 +3,8 @@
 > [!NOTE]
 > Просьба не судить сторого данный проект так как он был сделан для получения общего представления о работе ЯП и компиляторов.
 
+> [!NOTE]
+> Если вы хотите использовать этот код для своего проекта не забудьте упомянуть автора (L1stak)
 
 
 ### **Установка зависимостей**
@@ -40,6 +42,10 @@
 # Simple compiler
 > [!NOTE]
 > Please do not judge this project harshly, as it was made to obtain a general idea of ​​how programming languages ​​and compilers work.
+
+> [!NOTE]
+> If you want to use this code for your project, don't forget to mention the author (L1stak)
+
 
 # Implemented:
 1. Generating regular expressions for a specific set of keywords
